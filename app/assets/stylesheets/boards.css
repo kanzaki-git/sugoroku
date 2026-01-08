@@ -1,0 +1,15 @@
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  width: 600px;
+}
+
+.cell {
+  width: 60px;
+  height: 60px;
+  border: 1px solid #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
