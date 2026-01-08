@@ -1,9 +1,13 @@
 <h1>すごろく盤面</h1>
 
+<form action="<%= boards_path %>" method="get" class="board-form">
+  <label>マス数：</label>
+  <input type="number" name="size" value="<%= @size %>" min="1" max="200">
+  <button type="submit">盤面を作る</button>
+</form>
+
 <div class="board">
   <% @cells.each do |cell| %>
-    <div class="cell">
-      <%= cell %>
-    </div>
+    <div class="cell"><%= cell %></div>
   <% end %>
 </div>
