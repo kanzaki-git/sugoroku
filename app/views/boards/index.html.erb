@@ -1,10 +1,22 @@
 <h1>すごろく盤面</h1>
 
+<!-- 盤面を作るフォーム -->
 <form action="<%= boards_path %>" method="get" class="board-form">
   <label>マス数：</label>
   <input type="number" name="size" value="<%= @size %>" min="15" max="200">
   <button type="submit">盤面を作る</button>
 </form>
+
+<!-- サイコロを振るフォーム（sizeは維持する） -->
+<form action="<%= boards_path %>" method="get" class="board-form">
+  <input type="hidden" name="size" value="<%= @size %>">
+  <input type="hidden" name="roll" value="1">
+  <button type="submit">サイコロを振る</button>
+</form>
+
+<% if @dice.present? %>
+  <div class="dice">出た目：<%= @dice %></div>
+<% end %>
 
 <div class="board">
   <% @cells.each do |cell| %>
