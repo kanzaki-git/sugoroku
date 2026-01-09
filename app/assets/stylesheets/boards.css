@@ -1,7 +1,12 @@
+.board-form {
+  margin-bottom: 16px;
+}
+
 .board {
   display: flex;
   flex-wrap: wrap;
   width: 600px;
+  gap: 6px;
 }
 
 .cell {
@@ -12,8 +17,25 @@
   align-items: center;
   justify-content: center;
   font-weight: bold;
+  position: relative;
+  border-radius: 8px;
 }
 
-.board-form {
-  margin-bottom: 16px;
+.label {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  font-size: 10px;
+  padding: 2px 6px;
+  border: 1px solid #333;
+  border-radius: 999px;
+  background: #fff;
+}
+
+.cell.start {
+  border-width: 2px;
+}
+
+.cell.goal {
+  border-width: 2px;
 }

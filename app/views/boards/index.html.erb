@@ -8,6 +8,6 @@
 
 <div class="board">
   <% @cells.each do |cell| %>
-    <div class="cell"><%= cell %></div>
+    <%= board_cell(cell, @size) %>
   <% end %>
 </div>
